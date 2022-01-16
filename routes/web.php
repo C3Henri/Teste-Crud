@@ -17,6 +17,8 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
+Route::get('login', 'Resource\loginController@login')->name('login');
+
 Route::get('/dashboard', 'Resource\dashboardController@dashInfo')->name('dashboard');
 Route::get('/newuser', 'Resource\userController@newUser');
 Route::get('/edituser', 'Resource\userController@editUser');
